@@ -6,9 +6,8 @@ services:
     plan: free
     # A requirements.txt file must exist
     buildCommand: "pip install -r requirements.txt"
-    # A src/app.py file must exist and contain `server=app.server`
-    startCommand: "gunicorn --chdir src app:server"
+    # Ajusta la ruta al archivo app.py según sea necesario
+    startCommand: "gunicorn --chdir . app:server"  # Usa `.` si `app.py` está en la raíz
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
-        
