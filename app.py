@@ -19,16 +19,16 @@ from dash.exceptions import PreventUpdate
 
 # Leer y concatenar archivos de texto
 files = [
-    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/traiding 01-02-2023_part1.txt",
-    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/traiding 01-02-2023_part2.txt",
-    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/traiding 01-02-2023_part3.txt"
+    "traiding 01-02-2023_part1.txt",
+    "traiding 01-02-2023_part2.txt",
+    "traiding 01-02-2023_part3.txt"
 ]
 
 dfs = [pd.read_csv(file, sep=",", header=0) for file in files]
 dftra = pd.concat(dfs, ignore_index=True)
 
 # Leer el archivo CSV con los resultados de los modelos
-resultados_ml = pd.read_csv('/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/results_project_models.csv')
+resultados_ml = pd.read_csv('results_project_models.csv')
 
 # Eliminar espacios en los nombres de las columnas
 dftra.columns = dftra.columns.str.strip()
