@@ -20,9 +20,9 @@ from dash.exceptions import PreventUpdate
 
 # Leer y concatenar archivos de texto
 files = [
-    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/src/traiding 01-02-2023_part1.txt",
-    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/src/traiding 01-02-2023_part2.txt",
-    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/src/traiding 01-02-2023_part3.txt"
+    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/traiding 01-02-2023_part1.txt",
+    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/traiding 01-02-2023_part2.txt",
+    "/Users/juansebastianquintanacontreras/Desktop/Dash_avan#2_PF/traiding 01-02-2023_part3.txt"
 ]
 
 dfs = [pd.read_csv(file, sep=",", header=0) for file in files]
